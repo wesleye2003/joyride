@@ -1,7 +1,7 @@
 post "/blank" do
   response = Unirest.post 'https://life-left.p.mashape.com/time-left',
     headers: {
-      "X-Mashape-Key" => "x3YcE5ilwAmsh95XtfDNLuqet5yWp1OExE9jsnKbWIfwnBGrtJ",
+      "X-Mashape-Authorization" => "q5f35sq9vmmsh70hgwXmfaMEXxNGp1rlBYAjsnJw0laK6MQzyg",
       "Content-Type" => "application/x-www-form-urlencoded",
       "Accept" => "application/json"
     },
