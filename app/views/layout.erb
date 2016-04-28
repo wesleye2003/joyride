@@ -3,25 +3,25 @@
 <head>
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
-  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
-  <title></title>
+  <title>Joyride</title>
 </head>
 <body>
-<div id="content">
   <header>
-    <div id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/login">Login</a>
-      <% end %>
+    <a href="/">
+      <img class="title-img" src="img/coaste_inv.png"><img class="title-img" src="img/coaster.png"><img class="title-img" src="img/coaste_inv.png"><img class="title-img" src="img/coaster.png"><img class="title-img" src="img/coaste_inv.png"><img class="title-img" src="img/coaster.png">
+    </a>
+    <a class="title-text" href="/">Joyride.</a>
   </header>
-  <%= yield %>
-</div>
+
+  <div id="content">
+    <%= yield %>
+  </div>
 </body>
 </html>
