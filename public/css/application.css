@@ -42,13 +42,27 @@ header {
 	color: #5353AB;
 	background-color: #050519;
 	position: relative;
-	padding: 3em;
-	width: 50%;
+	padding: 2%;
+	width: 60%;
 	left: 0%;
 	right: 0%;
 	top: 0em;
 	margin: 0 auto;
-	-webkit-box-shadow: inset 0px -40px 50px -9px rgba(21,21,53,1);
-	-moz-box-shadow: inset 0px -40px 50px -9px rgba(21,21,53,1);
-	box-shadow: inset 0px -40px 50px -9px rgba(21,21,53,1);
+	-webkit-box-shadow: inset 0px 0px 10px 20px rgba(21,21,53,1);
+	-moz-box-shadow: inset 0px 0px 10px 20px rgba(21,21,53,1);
+	box-shadow: inset 0px 0px 10px 20px rgba(21,21,53,1);
+	text-align: center;
+	font-size: 1.3em;
+}
+
+label {
+	display: block;
+	width: 100%;
+}
+
+input {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	width: 30%;
+	text-align:	center;
 }
