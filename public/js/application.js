@@ -2,16 +2,20 @@ $(document).ready(function() {
 
   var countDatShit = function() {
     var value = parseInt($('.data').text());
-    console.log(value);
+    var value2 = parseInt($('.data2').text());
     var counter = 0;
+    var counter2 = 0;
     var countUpdater = setInterval(itemCounter, 4);
     function itemCounter(){
       if (counter >= value){
         clearInterval(countUpdater);
         counter = value;
+        counter2 = value2;
       };
       $('.counter-value').text(counter);
+      $('.counter-value2').text(counter2);
       counter+=  Math.round(value*.001);
+      counter2 += Math.round(value2*.001);
     };
   };
 
