@@ -45,9 +45,7 @@ $(document).ready(function() {
     event.preventDefault();
     var response = $.get('/rickroll');
     response.done(function(responseData){
-      $('.donuts').remove();
-      $('.rick').remove();
-      $('.bruh').hide();
+      $('.results').remove();
       $('#content').append(responseData);
     });
   });

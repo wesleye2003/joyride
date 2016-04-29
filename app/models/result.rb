@@ -14,7 +14,7 @@ class Result < ActiveRecord::Base
   end
 
   def fb
-  	(self.days*13.8).floor
+  	(self.days*40).floor
   end
 
   def sleeping
