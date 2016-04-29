@@ -50,6 +50,7 @@ $(document).ready(function() {
     var response = $.get('/rickroll');
     response.done(function(responseData){
       $('.results').remove();
+      $('.rick').remove();
       $('#content').append(responseData);
     });
   });
