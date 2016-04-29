@@ -1,0 +1,12 @@
+<% if results %>
+  <div class='results'>
+  	<span class="hidden data"><%=results.sleeping%></span>
+    <h2>Additionally...</h2>
+    <p>You're going to sleep about
+      <span class="counter-value"></span>
+    hours before you die. Why not pull that all-nighter, right?</p>
+    <p>DISCLAIMER: we do not condone pulling all-nighters.</p>
+
+	  <%= erb :_nav, layout: false %>
+  </div>
+<% end %>
