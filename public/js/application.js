@@ -5,8 +5,9 @@ $(document).ready(function() {
     var data = $(this).serialize();
     var response = $.post('/results', data);
     response.done(function(responseData){
-      $('.bruh').hide();
-      $('#content').append(responseData);
+      $('.bruh').remove();
+      $('.start-form').hide();
+      $('#content').prepend(responseData);
       var rides = parseInt($('.rides').text());
       var i = 0;
       var updater = setInterval(changeCount, 4);
@@ -17,6 +18,28 @@ $(document).ready(function() {
         };
         $('.counter-value').text(i);
         i+= 10101;
+      };
+    });
+  });
+
+  $('#content').on('click','.donut-link', function(event){
+    event.preventDefault();
+    var div = $(this);
+    var response = $.get('/donuts');
+    response.done(function(responseData){
+      $('.donuts').remove();
+      $('.bruh').hide();
+      $('#content').prepend(responseData);
+      var donuts = parseInt($('.donuts-ct').text());
+      var i = 0;
+      var updater = setInterval(changeCount, 4);
+      function changeCount(){
+        if (i >= donuts){
+          clearInterval(updater);
+          $('.donut-counter-value').text(donuts);
+        };
+        $('.donut-counter-value').text(i);
+        i+= 101;
       };
     });
   });
