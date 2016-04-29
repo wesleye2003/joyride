@@ -85,11 +85,18 @@ input {
 	width: 60%;
 }
 
-.counter-value {
-	 display: block;
-	 border: 1px solid black;
-	 background-color:#25252D; 
-	 color: #3131DC;
+.counter-value, .counter-value2 {
+	display: block;
+	background-color:#25252D; 
+	color: #3131DC;
+	width: 30%;
+	left: 0%;
+	right: 0%;
+	top: 0em;
+	margin: 0 auto;
+	-webkit-box-shadow: inset 0px 0px 10px 20px rgba(21,21,53,1);
+	-moz-box-shadow: inset 0px 0px 10px 20px rgba(21,21,53,1);
+	box-shadow: inset 0px 0px 10px 20px rgba(21,21,53,1);
 }
 
 .results p{
