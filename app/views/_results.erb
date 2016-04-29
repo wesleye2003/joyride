@@ -1,11 +1,11 @@
 <% if results %>
-  <span class="hidden rides"><%=results.rides%></span>
   <div class='bruh'>
+    <span class="hidden data"><%=results.rides%></span>
     <h2>Bruh!</h2>
     <p>If you spent the rest of your life riding sick ass roller coasters, you could ride
       <span class="counter-value"></span>
     times!! Bruuuhhh!</p>
-		<a class="donut-link"href="/donuts"><img class="image-link" src="img/donut.gif"></a>
-		<a class="rick-link" href="/rickroll"><img class="image-link" src="img/rick.gif"></a>
+
+    <%= erb :_nav, layout: false %>
   </div>
 <% end %>
