@@ -24,7 +24,7 @@ header {
 	text-decoration: none;
 	position: absolute;
 	font-family: 'Pacifico', cursive;
-	font-size: 3em;
+	font-size: 3.5em;
 	width: auto;
 	left:0;
 	right: 0;
@@ -38,7 +38,7 @@ header {
 	width: 16.6%;
 }
 
-.start-form, .bruh, .rick, .donut{
+.start-form, .bruh, .rick, .donuts{
 	color: #5353AB;
 	background-color: #050519;
 	position: relative;
@@ -76,8 +76,12 @@ input {
 	width: 2em;
 }
 
+.roll-pic {
+	width: 4em;
+}
+
 .rick {
-	width: 22%;
+	width: 40%;
 }
 
 .bruh {

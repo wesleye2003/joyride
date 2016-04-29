@@ -7,6 +7,13 @@ post "/results" do
   end
 end
 
+get "/results" do
+  @results = Result.last
+  if request.xhr?
+    erb :_results, locals: {results: @results||=nil}, layout: false
+  end
+end
+
 get "/donuts" do
 	if request.xhr?
     @results = Result.last
