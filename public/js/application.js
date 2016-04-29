@@ -29,7 +29,8 @@ $(document).ready(function() {
       $('.donuts').remove();
       $('.rick').remove();
       $('#content').prepend(responseData);
-      var donuts = parseInt($('.donuts-ct').text());
+      var donuts = donuts || parseInt($('.donuts-ct').text());
+      debugger;
       var x = x || 0;
       var donUpdater = setInterval(donutCount, 10);
       function donutCount(){
