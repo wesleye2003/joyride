@@ -24,7 +24,7 @@ header {
 	text-decoration: none;
 	position: absolute;
 	font-family: 'Pacifico', cursive;
-	font-size: 3em;
+	font-size: 3.5em;
 	width: auto;
 	left:0;
 	right: 0;
@@ -38,7 +38,7 @@ header {
 	width: 16.6%;
 }
 
-.start-form {
+.start-form, .bruh, .rick, .donuts{
 	color: #5353AB;
 	background-color: #050519;
 	position: relative;
@@ -52,7 +52,7 @@ header {
 	-moz-box-shadow: inset 0px 0px 10px 20px rgba(21,21,53,1);
 	box-shadow: inset 0px 0px 10px 20px rgba(21,21,53,1);
 	text-align: center;
-	font-size: 1.3em;
+	font-size: 1.9em;
 }
 
 label {
@@ -69,4 +69,27 @@ input {
 
 .hidden {
 	display: none;
+}
+
+.image-link {
+	height: 2em;
+	width: 2em;
+}
+
+.roll-pic {
+	width: 4em;
+}
+
+.rick {
+	width: 40%;
+}
+
+.bruh {
+	padding-left: 4em;
+	padding-right: 4em;
+}
+
+.credits {
+	width: 100%;
+	text-align: center;
 }

@@ -8,7 +8,7 @@ helpers do
     },
     parameters: {
       "birth" => params[:birth],
-      "gender" => params[:gender]
+      "gender" => params[:gender].downcase
     }
     data = request.body['data']
     results = Result.create({
