@@ -1,4 +1,20 @@
 $(document).ready(function() {
+
+  var countDatShit = function() {
+    var value = parseInt($('.data').text());
+    console.log(value);
+    var counter = 0;
+    var countUpdater = setInterval(itemCounter, 4);
+    function itemCounter(){
+      if (counter >= value){
+        clearInterval(countUpdater);
+        counter = value;
+      };
+      $('.counter-value').text(counter);
+      counter+=  Math.round(value*.001);
+    };
+  };
+
   $('.start-form').on('submit', function(event){
     event.preventDefault();
     var form = $(this);
@@ -7,52 +23,23 @@ $(document).ready(function() {
     response.done(function(responseData){
       $('.start-form').remove();
       $('#content').prepend(responseData);
-      var rides = parseInt($('.rides').text());
-      var i = i || 0;
-      var updater = setInterval(changeCount, 4);
-      function changeCount(){
-        if (i >= rides){
-          clearInterval(updater);
-          $('.counter-value').text(rides);
-        };
-        $('.counter-value').text(i);
-        i+= 10101;
-      };
+      countDatShit();
     });
   });
 
-  $('#content').on('click','.donut-link', function(event){
+
+  $('#content').on('click','.result-link', function(event){
     event.preventDefault();
-    var response = $.get('/donuts');
+    var link = $(this).attr('href');
+    var response = $.get(link);
     response.done(function(responseData){
-      $('.bruh').hide();
-      $('.donuts').remove();
+      $('.results').remove();
       $('.rick').remove();
-      $('#content').prepend(responseData);
-      var donuts = donuts || parseInt($('.donuts-ct').text());
-      debugger;
-      var x = x || 0;
-      var donUpdater = setInterval(donutCount, 10);
-      function donutCount(){
-        if (x >= donuts){
-          clearInterval(donUpdater);
-          $('.donut-counter-value').text(donuts);
-        };
-        $('.donut-counter-value').text(x);
-        x+= 11;
-      };
+      $('#content').append(responseData);
+      countDatShit();
     });
   });
 
-  $('#content').on('click', '.result-link', function(event){
-    event.preventDefault();
-    var response = $.get('/results');
-    response.done(function(){
-      $('.donuts').remove();
-      $('.rick').remove();
-      $('.bruh').show();
-    });
-  });
 
   $('#content').on('click', '.rick-link', function(event){
     event.preventDefault();

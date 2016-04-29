@@ -38,7 +38,7 @@ header {
 	width: 16.6%;
 }
 
-.start-form, .bruh, .rick, .donuts{
+.start-form, .results, .rick{
 	color: #5353AB;
 	background-color: #050519;
 	position: relative;
@@ -84,10 +84,6 @@ input {
 	width: 60%;
 }
 
-.bruh {
-	padding-left: 4em;
-	padding-right: 4em;
-}
 
 .credits {
 	width: 100%;
