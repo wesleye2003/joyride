@@ -52,4 +52,15 @@ $(document).ready(function() {
       $('.bruh').show();
     });
   });
+
+  $('#content').on('click', '.rick-link', function(event){
+    event.preventDefault();
+    var response = $.get('/rickroll');
+    response.done(function(responseData){
+      $('.donuts').remove();
+      $('.rick').remove();
+      $('.bruh').hide();
+      $('#content').append(responseData);
+    });
+  });
 });

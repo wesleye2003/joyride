@@ -22,5 +22,7 @@ get "/donuts" do
 end
 
 get "/rickroll" do
-	erb :rickroll
+  if request.xhr?
+	  erb :rickroll, layout: false
+  end
 end
